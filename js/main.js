@@ -240,4 +240,4 @@ var setupImage = function () {
     setupImage();
     setupCountdown();
   });
-})();
+//})();
