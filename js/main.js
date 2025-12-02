@@ -223,7 +223,7 @@ var setupCountdown = function () {
 };
 
   var setupImage = function () {
-    var imagePath = "imagePath"; 
+    /*var imagePath = "imagePath"; 
     var storageImgUrl = "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media"; 
     
     // Khắc phục lỗi và sửa đường dẫn ảnh cô dâu chú rể
@@ -233,7 +233,7 @@ var setupCountdown = function () {
     );
     document.getElementById("image-bride").src = storageImgUrl.replace(
       imagePath,
-      "images%2Fkim.jpg" // ĐƯỜNG DẪN ẢNH CÔ DÂU
+      "images%2Fkim.jpg" // ĐƯỜNG DẪN ẢNH CÔ DÂU*/
     );
 };
 
