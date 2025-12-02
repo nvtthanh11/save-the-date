@@ -228,11 +228,11 @@ var setupCountdown = function () {
       "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media";
     document.getElementById("image-groom").src = storageImgUrl.replace(
       imagePath,
-      "images%2Fgroom.jpeg"
+      "images%2Fthanh.jpg"
     );
     document.getElementById("image-bride").src = storageImgUrl.replace(
       imagePath,
-      "images%2Fbride.png"
+      "images%2Fkim.jpg"
     );
   };
 
