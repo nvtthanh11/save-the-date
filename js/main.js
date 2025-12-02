@@ -190,9 +190,9 @@
     $(window).stellar();
   };
 
+// BẮT ĐẦU TỪ DÒNG 193
 var setupCountdown = function () {
-    // Ngày cưới: 28 tháng 12 năm 2025, 11 giờ (Giờ đón khách)
-    // Thiết lập trực tiếp tham số (Năm: 2025, Tháng: 12, Ngày: 28)
+    // Thiết lập ngày cưới
     simplyCountdown(".simply-countdown-one", {
         year: 2025,
         month: 12, 
@@ -207,10 +207,10 @@ var setupCountdown = function () {
             seconds: "giây",
             pluralLetter: "",
         },
-        enableUtc: false // Sử dụng giờ địa phương của khách
+        enableUtc: false 
     });
 
-    // Khối code này là của template, bạn cứ giữ nguyên để tránh lỗi
+    // Giữ nguyên khối code losange của template
     $("#simply-countdown-losange").simplyCountdown({
         year: 2025,
         month: 12,
@@ -220,22 +220,12 @@ var setupCountdown = function () {
         seconds: 0,
         enableUtc: false,
     });
-};
+}; // KẾT THÚC HÀM setupCountdown. KHÔNG CÓ DẤU CHẤM PHẨY Ở ĐÂY.
 
-  var setupImage = function () {
-    /*var imagePath = "imagePath"; 
-    var storageImgUrl = "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media"; 
-    
-    // Khắc phục lỗi và sửa đường dẫn ảnh cô dâu chú rể
-    document.getElementById("image-groom").src = storageImgUrl.replace(
-      imagePath,
-      "images%2Fthanh.jpg" // ĐƯỜNG DẪN ẢNH CHÚ RỂ
-    );
-    document.getElementById("image-bride").src = storageImgUrl.replace(
-      imagePath,
-      "images%2Fkim.jpg" // ĐƯỜNG DẪN ẢNH CÔ DÂU
-    );*/
-};
+var setupImage = function () {
+    // HÀM ĐƯỢC ĐỂ TRỐNG ĐỂ NGĂN JAVASCRIPT GHI ĐÈ ẢNH
+}; // KẾT THÚC HÀM setupImage. CẦN DẤU CHẤM PHẨY NẾU TRƯỚC HÀM TIẾP THEO CÓ KHAI BÁO VAR.
+// DÒNG CODE TIẾP THEO: SẼ LÀ PHẦN $(function() {
 
   $(function () {
     mobileMenuOutsideClick();
