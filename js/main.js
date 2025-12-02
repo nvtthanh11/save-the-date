@@ -190,9 +190,8 @@
     $(window).stellar();
   };
 
-// BẮT ĐẦU TỪ DÒNG 193
 var setupCountdown = function () {
-    // Thiết lập ngày cưới
+    // Thiết lập ngày cưới: 28 tháng 12 năm 2025, 11 giờ
     simplyCountdown(".simply-countdown-one", {
         year: 2025,
         month: 12, 
@@ -220,12 +219,11 @@ var setupCountdown = function () {
         seconds: 0,
         enableUtc: false,
     });
-}; // KẾT THÚC HÀM setupCountdown. KHÔNG CÓ DẤU CHẤM PHẨY Ở ĐÂY.
+}; // KẾT THÚC HÀM setupCountdown
 
 var setupImage = function () {
-    // HÀM ĐƯỢC ĐỂ TRỐNG ĐỂ NGĂN JAVASCRIPT GHI ĐÈ ẢNH
-}; // KẾT THÚC HÀM setupImage. CẦN DẤU CHẤM PHẨY NẾU TRƯỚC HÀM TIẾP THEO CÓ KHAI BÁO VAR.
-// DÒNG CODE TIẾP THEO: SẼ LÀ PHẦN $(function() {
+    // HÀM ĐƯỢC ĐỂ TRỐNG để NGĂN LỖI GHI ĐÈ ảnh và LỖI CÚ PHÁP
+}; // KẾT THÚC HÀM setupImage
 
   $(function () {
     mobileMenuOutsideClick();
