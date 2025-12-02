@@ -191,14 +191,13 @@
   };
 
 var setupCountdown = function () {
-    // Xóa hoặc comment dòng cũ, thay bằng:
-    // var d = new Date("May 07, 2022 16:00:00 GMT-0700"); 
-
+    // Ngày cưới: 28 tháng 12 năm 2025, 11 giờ (Giờ đón khách)
+    // Thiết lập trực tiếp tham số (Năm: 2025, Tháng: 12, Ngày: 28)
     simplyCountdown(".simply-countdown-one", {
-        year: 2025,   // NĂM
-        month: 12,    // THÁNG 12
-        day: 28,      // NGÀY 28
-        hours: 11,    // GIỜ (11:00 AM - Đón khách)
+        year: 2025,
+        month: 12, 
+        day: 28,
+        hours: 11,
         minutes: 0,
         seconds: 0,
         words: {
@@ -208,8 +207,20 @@ var setupCountdown = function () {
             seconds: "giây",
             pluralLetter: "",
         },
+        enableUtc: false // Sử dụng giờ địa phương của khách
     });
-  };
+
+    // Khối code này là của template, bạn cứ giữ nguyên để tránh lỗi
+    $("#simply-countdown-losange").simplyCountdown({
+        year: 2025,
+        month: 12,
+        day: 28,
+        hours: 11,
+        minutes: 0,
+        seconds: 0,
+        enableUtc: false,
+    });
+};
 
   var setupImage = function () {
     var imagePath = "imagePath";
