@@ -219,21 +219,11 @@ var setupCountdown = function () {
         seconds: 0,
         enableUtc: false,
     });
-}; // KẾT THÚC HÀM setupCountdown
+}; 
 
-  var setupImage = function () {
-    var imagePath = "imagePath";
-    var storageImgUrl =
-      "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media";
-    document.getElementById("image-groom").src = storageImgUrl.replace(
-      imagePath,
-      "images%2Fgroom.jpeg"
-    );
-    document.getElementById("image-bride").src = storageImgUrl.replace(
-      imagePath,
-      "images%2Fbride.png"
-    );
-  };
+var setupImage = function () {
+    // HÀM ĐƯỢC ĐỂ TRỐNG để NGĂN LỖI GHI ĐÈ
+}; 
 
   $(function () {
     mobileMenuOutsideClick();
