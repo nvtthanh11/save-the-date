@@ -222,19 +222,20 @@ var setupCountdown = function () {
     });
 };
 
-  /*var setupImage = function () {
-    var imagePath = "imagePath";
-    var storageImgUrl =
-      "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media";
+  var setupImage = function () {
+    var imagePath = "imagePath"; 
+    var storageImgUrl = "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media"; 
+    
+    // Khắc phục lỗi và sửa đường dẫn ảnh cô dâu chú rể
     document.getElementById("image-groom").src = storageImgUrl.replace(
       imagePath,
-      "images%2Fthanh.jpg"
+      "images%2Fthanh.jpg" // ĐƯỜNG DẪN ẢNH CHÚ RỂ
     );
     document.getElementById("image-bride").src = storageImgUrl.replace(
       imagePath,
-      "images%2Fkim.jpg"
+      "images%2Fkim.jpg" // ĐƯỜNG DẪN ẢNH CÔ DÂU
     );
-  };
+};
 
   $(function () {
     mobileMenuOutsideClick();
