@@ -190,40 +190,39 @@
     $(window).stellar();
   };
 
-var setupCountdown = function () {
-    // Thiết lập ngày cưới: 28 tháng 12 năm 2025, 11 giờ
-    simplyCountdown(".simply-countdown-one", {
-        year: 2025,
-        month: 12, 
-        day: 28,
-        hours: 11,
-        minutes: 0,
-        seconds: 0,
-        words: {
-            days: "ngày",
-            hours: "giờ",
-            minutes: "phút",
-            seconds: "giây",
-            pluralLetter: "",
-        },
-        enableUtc: false 
-    });
+  var setupCountdown = function () {
+      // THAY THẾ KHỐI CŨ BẰNG KHỐI CHỈNH SỬA
+      simplyCountdown(".simply-countdown-one", {
+          year: 2025,
+          month: 12, 
+          day: 28,
+          hours: 11,
+          minutes: 0,
+          seconds: 0,
+          words: {
+              days: "ngày",
+              hours: "giờ",
+              minutes: "phút",
+              seconds: "giây",
+              pluralLetter: "",
+          },
+          enableUtc: false 
+      });
 
-    // Giữ nguyên khối code losange của template
-    $("#simply-countdown-losange").simplyCountdown({
-        year: 2025,
-        month: 12,
-        day: 28,
-        hours: 11,
-        minutes: 0,
-        seconds: 0,
-        enableUtc: false,
-    });
-}; 
+      $("#simply-countdown-losange").simplyCountdown({
+          year: 2025,
+          month: 12,
+          day: 28,
+          hours: 11,
+          minutes: 0,
+          seconds: 0,
+          enableUtc: false,
+      });
+  };
 
-var setupImage = function () {
-    // HÀM ĐƯỢC ĐỂ TRỐNG để NGĂN LỖI GHI ĐÈ
-}; 
+  var setupImage = function () {
+      // HÀM ĐỂ TRỐNG - VÔ HIỆU HÓA GHI ĐÈ ẢNH
+  };
 
   $(function () {
     mobileMenuOutsideClick();
