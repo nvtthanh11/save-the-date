@@ -190,27 +190,24 @@
     $(window).stellar();
   };
 
-  var setupCountdown = function () {
-    var d = new Date("December 28, 2025 11:00:00 GMT-0700");
+var setupCountdown = function () {
+    // Xóa hoặc comment dòng cũ, thay bằng:
+    // var d = new Date("May 07, 2022 16:00:00 GMT-0700"); 
 
     simplyCountdown(".simply-countdown-one", {
-      year: d.getFullYear(),
-      month: d.getMonth() + 1,
-      day: d.getDate(),
-      words: {
-        days: "ngày",
-        hours: "giờ",
-        minutes: "phút",
-        seconds: "giây",
-        pluralLetter: "",
-      },
-    });
-
-    $("#simply-countdown-losange").simplyCountdown({
-      year: d.getFullYear(),
-      month: d.getMonth() + 1,
-      day: d.getDate(),
-      enableUtc: false,
+        year: 2025,   // NĂM
+        month: 12,    // THÁNG 12
+        day: 28,      // NGÀY 28
+        hours: 11,    // GIỜ (11:00 AM - Đón khách)
+        minutes: 0,
+        seconds: 0,
+        words: {
+            days: "ngày",
+            hours: "giờ",
+            minutes: "phút",
+            seconds: "giây",
+            pluralLetter: "",
+        },
     });
   };
 
