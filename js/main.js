@@ -221,9 +221,19 @@ var setupCountdown = function () {
     });
 }; // KẾT THÚC HÀM setupCountdown
 
-var setupImage = function () {
-    // HÀM ĐƯỢC ĐỂ TRỐNG để NGĂN LỖI GHI ĐÈ ảnh và LỖI CÚ PHÁP
-}; // KẾT THÚC HÀM setupImage
+  var setupImage = function () {
+    var imagePath = "imagePath";
+    var storageImgUrl =
+      "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media";
+    document.getElementById("image-groom").src = storageImgUrl.replace(
+      imagePath,
+      "images%2Fgroom.jpeg"
+    );
+    document.getElementById("image-bride").src = storageImgUrl.replace(
+      imagePath,
+      "images%2Fbride.png"
+    );
+  };
 
   $(function () {
     mobileMenuOutsideClick();
@@ -240,4 +250,4 @@ var setupImage = function () {
     setupImage();
     setupCountdown();
   });
-//})();
+})();
