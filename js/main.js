@@ -222,7 +222,7 @@ var setupCountdown = function () {
     });
 };
 
-  var setupImage = function () {
+  /*var setupImage = function () {
     var imagePath = "imagePath";
     var storageImgUrl =
       "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media";
