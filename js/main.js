@@ -233,8 +233,8 @@ var setupCountdown = function () {
     );
     document.getElementById("image-bride").src = storageImgUrl.replace(
       imagePath,
-      "images%2Fkim.jpg" // ĐƯỜNG DẪN ẢNH CÔ DÂU*/
-    );
+      "images%2Fkim.jpg" // ĐƯỜNG DẪN ẢNH CÔ DÂU
+    );*/
 };
 
   $(function () {
