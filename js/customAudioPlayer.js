@@ -1,6 +1,6 @@
 const audioPlayer = document.querySelector(".custom-audio-player");
 const audio = new Audio(
-  "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/musics%2FNgayDauTien-DucPhuc.mp3?alt=media"
+  "https://firebasestorage.googleapis.com/v0/b/wedding-670cf.firebasestorage.app/o/CHI%CC%89%20CA%CC%82%CC%80N%20CO%CC%81%20NHAU%20-%20VU%CC%83%20CA%CC%81T%20TU%CC%9BO%CC%9B%CC%80NG%20x%20PNJ%20-%20OFFICIAL%20MUSIC%20VIDEO.mp3?alt=media&token=e857882f-9e8d-4486-a8e3-c9c4012a3d7a"
 );
 
 console.dir(audio);
