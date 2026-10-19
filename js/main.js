@@ -196,7 +196,7 @@
           year: 2025,
           month: 12, 
           day: 28,
-          hours: 11,
+          hours: 12,
           minutes: 0,
           seconds: 0,
           words: {
@@ -206,17 +206,19 @@
               seconds: "giây",
               pluralLetter: "",
           },
-          enableUtc: false 
+          enableUtc: false,
+          countUp: true
       });
 
       $("#simply-countdown-losange").simplyCountdown({
           year: 2025,
           month: 12,
           day: 28,
-          hours: 11,
+          hours: 12,
           minutes: 0,
           seconds: 0,
           enableUtc: false,
+          countUp: true
       });
   };
 
