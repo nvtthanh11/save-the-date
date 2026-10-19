@@ -139,7 +139,8 @@
                 sectionClass: 'simply-section',
                 amountClass: 'simply-amount',
                 wordClass: 'simply-word',
-                zeroPad: false
+                zeroPad: false,
+                countUp: false
             }, args),
             interval,
             targetDate,
@@ -186,13 +187,23 @@
                     secondWord;
 
                 now = new Date();
-                if (parameters.enableUtc) {
-                    nowUtc = new Date(now.getFullYear(), now.getMonth(), now.getDate(),
-                        now.getHours(), now.getMinutes(), now.getSeconds());
-                    secondsLeft = (targetDate - nowUtc.getTime()) / 1000;
-
+                if (parameters.countUp) {
+                    if (parameters.enableUtc) {
+                        nowUtc = new Date(now.getFullYear(), now.getMonth(), now.getDate(),
+                            now.getHours(), now.getMinutes(), now.getSeconds());
+                        secondsLeft = (nowUtc.getTime() - targetDate) / 1000;
+                    } else {
+                        secondsLeft = (now.getTime() - targetDate) / 1000;
+                    }
                 } else {
-                    secondsLeft = (targetDate - now.getTime()) / 1000;
+                    if (parameters.enableUtc) {
+                        nowUtc = new Date(now.getFullYear(), now.getMonth(), now.getDate(),
+                            now.getHours(), now.getMinutes(), now.getSeconds());
+                        secondsLeft = (targetDate - nowUtc.getTime()) / 1000;
+
+                    } else {
+                        secondsLeft = (targetDate - now.getTime()) / 1000;
+                    }
                 }
 
                 if (secondsLeft > 0) {
@@ -209,8 +220,10 @@
                     hours = 0;
                     minutes = 0;
                     seconds = 0;
-                    window.clearInterval(interval);
-                    parameters.onEnd();
+                    if (!parameters.countUp) {
+                        window.clearInterval(interval);
+                        parameters.onEnd();
+                    }
                 }
 
                 if (parameters.plural) {
