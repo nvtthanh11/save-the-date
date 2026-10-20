@@ -191,37 +191,35 @@
   };
 
   var setupCountdown = function () {
-      // THAY THẾ KHỐI CŨ BẰNG KHỐI CHỈNH SỬA
-      simplyCountdown(".simply-countdown-one", {
-          year: 2025,
-          month: 12, 
-          day: 28,
-          hours: 11,
-          minutes: 0,
-          seconds: 0,
-          words: {
-              days: "ngày",
-              hours: "giờ",
-              minutes: "phút",
-              seconds: "giây",
-              pluralLetter: "",
-          },
-          enableUtc: false 
-      });
+    var targetDate = new Date(2025, 11, 28, 12, 0, 0);
+    var countdownEl = document.querySelector(".simply-countdown-one");
 
-      $("#simply-countdown-losange").simplyCountdown({
-          year: 2025,
-          month: 12,
-          day: 28,
-          hours: 11,
-          minutes: 0,
-          seconds: 0,
-          enableUtc: false,
-      });
+    if (!countdownEl) return;
+
+    var render = function () {
+      var now = new Date();
+      var diffMs = Math.max(0, now.getTime() - targetDate.getTime());
+      var totalSeconds = Math.floor(diffMs / 1000);
+
+      var days = Math.floor(totalSeconds / 86400);
+      var hours = Math.floor((totalSeconds % 86400) / 3600);
+      var minutes = Math.floor((totalSeconds % 3600) / 60);
+      var seconds = totalSeconds % 60;
+
+      countdownEl.innerHTML = [
+        '<div class="simply-section simply-days-section"><div><span class="simply-amount">' + days + '</span><span class="simply-word">ngày</span></div></div>',
+        '<div class="simply-section simply-hours-section"><div><span class="simply-amount">' + hours + '</span><span class="simply-word">giờ</span></div></div>',
+        '<div class="simply-section simply-minutes-section"><div><span class="simply-amount">' + minutes + '</span><span class="simply-word">phút</span></div></div>',
+        '<div class="simply-section simply-seconds-section"><div><span class="simply-amount">' + seconds + '</span><span class="simply-word">giây</span></div></div>'
+      ].join("");
+    };
+
+    render();
+    setInterval(render, 1000);
   };
 
   var setupImage = function () {
-      // HÀM ĐỂ TRỐNG - VÔ HIỆU HÓA GHI ĐÈ ẢNH
+    // HÀM ĐỂ TRỐNG - VÔ HIỆU HÓA GHI ĐÈ ẢNH
   };
 
   $(function () {
